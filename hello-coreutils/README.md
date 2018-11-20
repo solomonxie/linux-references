@@ -21,4 +21,3 @@ tool's most common real-world usages as runnable example commands.
 | `lsblk.sh` | list block devices |
 | `mount.sh` | mount/unmount filesystems |
 
-TODO: fill in each script with common usage examples.
