@@ -4,7 +4,7 @@ A step-by-step series learning Alpine's `apk` package manager from basics
 through advanced usage. Each step is a standalone `apk_NN_topic.sh` — a
 full copy of the previous step plus one new concept.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -17,5 +17,3 @@ Planned steps (not yet written):
 | `apk_07_world_pinning.sh` | `/etc/apk/world`, pinning versions |
 | `apk_08_build_local.sh` | advanced: building/installing a local package with `abuild` |
 | `apk_09_custom_repo.sh` | advanced: hosting/using a custom apk repository |
-
-TODO: write each step per the progressive-learning convention.
