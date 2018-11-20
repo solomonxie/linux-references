@@ -5,7 +5,7 @@ advanced usage. Each step is a standalone `Makefile_NN_topic.mk` — a full
 copy of the previous step plus one new concept, runnable on its own via
 `make -f Makefile_NN_topic.mk`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -24,4 +24,4 @@ Planned steps (not yet written):
 | `Makefile_13_eval_call.mk` | advanced: `eval`, `call`, generated rules |
 | `Makefile_14_self_documenting.mk` | advanced: self-documenting `make help` targets |
 
-TODO: write each step per the progressive-learning convention.
+Run any step with `make -f <file>` (e.g. `make -f Makefile_09_order_only.mk`).

@@ -4,7 +4,7 @@ A step-by-step series learning musl libc — the C standard library Alpine
 uses instead of glibc — and where it diverges from what most other
 distros assume. Each step is a standalone `musl_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -14,5 +14,3 @@ Planned steps (not yet written):
 | `musl_04_gcompat.sh` | `gcompat` for running glibc binaries on Alpine |
 | `musl_05_segfault_debugging.sh` | debugging crashes caused by musl vs glibc assumptions |
 | `musl_06_build_from_source.sh` | advanced: building third-party software against musl |
-
-TODO: write each step per the progressive-learning convention.
