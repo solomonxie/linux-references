@@ -4,7 +4,7 @@ A step-by-step series learning systemd — the init system most non-Alpine
 distros use, and the natural counterpart to `alpine/openrc/`. Each step
 is a standalone `systemd_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -16,4 +16,3 @@ Planned steps (not yet written):
 | `systemd_06_timers.sh` | `.timer` units vs cron |
 | `systemd_07_vs_openrc.sh` | advanced: systemd vs OpenRC concept mapping |
 
-TODO: write each step per the progressive-learning convention.
