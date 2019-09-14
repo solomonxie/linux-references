@@ -3,7 +3,7 @@
 A step-by-step series learning Linux filesystems — ext4, xfs, btrfs, mount
 options, inodes, and LVM. Each step is a standalone `fs_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -15,4 +15,3 @@ Planned steps (not yet written):
 | `fs_06_inodes.sh` | inodes, `df -i`, `stat` |
 | `fs_07_lvm.sh` | advanced: physical/volume/logical volumes, online resize |
 
-TODO: write each step per the progressive-learning convention.
