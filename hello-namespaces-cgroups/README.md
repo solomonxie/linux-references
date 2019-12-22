@@ -3,7 +3,7 @@
 A step-by-step series learning the kernel primitives containers are built
 on: namespaces and cgroup v2. Each step is a standalone `ns_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -14,4 +14,3 @@ Planned steps (not yet written):
 | `ns_05_cgroups_v2_basics.sh` | cgroup v2 filesystem, cpu/memory limits |
 | `ns_06_build_a_container.sh` | advanced: combining namespaces + cgroups + chroot into a minimal container |
 
-TODO: write each step per the progressive-learning convention.
