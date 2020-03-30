@@ -3,7 +3,7 @@
 A step-by-step series learning Linux networking — iproute2, netfilter,
 and network namespaces. Each step is a standalone `net_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -14,4 +14,3 @@ Planned steps (not yet written):
 | `net_05_nftables_basics.sh` | `nftables`, the iptables successor |
 | `net_06_bridges_veth.sh` | advanced: veth pairs + a bridge, container-style networking |
 
-TODO: write each step per the progressive-learning convention.
