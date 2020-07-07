@@ -3,7 +3,7 @@
 A step-by-step series learning Linux process management — signals,
 `/proc`, and scheduling. Each step is a standalone `proc_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -13,4 +13,3 @@ Planned steps (not yet written):
 | `proc_04_nice_priority.sh` | `nice`, `renice`, `ionice` |
 | `proc_05_cgroup_scheduling.sh` | advanced: cgroup v2 `cpu.weight`/`cpu.max` |
 
-TODO: write each step per the progressive-learning convention.
