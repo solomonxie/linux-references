@@ -3,7 +3,7 @@
 A step-by-step series learning Linux permissions — users/groups, ACLs,
 special bits, and capabilities. Each step is a standalone `perm_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -13,4 +13,3 @@ Planned steps (not yet written):
 | `perm_04_acls.sh` | `getfacl`/`setfacl` |
 | `perm_05_capabilities.sh` | advanced: `setcap`/`getcap`, fine-grained root privileges |
 
-TODO: write each step per the progressive-learning convention.
