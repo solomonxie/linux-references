@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Run: sh boot_05_init_systems.sh (reference notes, not meant to fully execute)
+# What this step adds: advanced — comparing what runs as PID 1.
+# Step 5: init systems as PID 1
+
+cat /proc/cmdline
+
+# Step 5: whatever the kernel hands off to as PID 1 defines "init"
+ps -p 1 -o pid,comm
+
+# Step 5: three common choices, same job (bring the system to a usable
+# state, then supervise services), different designs:
+#   sysvinit  — sequential /etc/init.d scripts run by rc, oldest model
+#   OpenRC    — dependency-aware script runner over the same kind of
+#               /etc/init.d scripts (see alpine/openrc/)
+#   systemd   — a single long-running daemon, unit files instead of
+#               scripts, native cgroup-per-service tracking (see hello-systemd/)
+
+# Step 5: you can point the kernel at a different init for rescue purposes
+# by appending init=/bin/sh to the kernel command line (see step 4) — this
+# skips PID 1 entirely and drops you straight into a shell
