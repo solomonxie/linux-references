@@ -4,7 +4,7 @@ A step-by-step series learning bash as a programming language, from basic
 scripting up through advanced usage. Each step is a standalone
 `bash_NN_topic.sh`.
 
-Planned steps (not yet written):
+Steps:
 
 | File | Topic |
 |---|---|
@@ -21,4 +21,3 @@ Planned steps (not yet written):
 | `bash_11_process_substitution.sh` | `<(...)`, `>(...)` |
 | `bash_12_advanced_debugging.sh` | advanced: `set -x`/`set -e`/`set -u`, shellcheck |
 
-TODO: write each step per the progressive-learning convention.
