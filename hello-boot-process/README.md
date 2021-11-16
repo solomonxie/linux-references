@@ -9,8 +9,9 @@ Steps:
 | File | Topic |
 |---|---|
 | `boot_01_overview.sh` | BIOS/UEFI → bootloader → kernel → init, the full chain |
-| `boot_02_grub.sh` | GRUB config basics |
-| `boot_03_initramfs.sh` | initramfs, `lsinitrd`/`dracut` basics |
-| `boot_04_kernel_params.sh` | `/proc/cmdline`, kernel boot parameters |
-| `boot_05_init_systems.sh` | advanced: sysvinit vs OpenRC vs systemd as PID 1 |
+| `boot_02_uefi_bios.sh` | UEFI (ESP, `efibootmgr`, Secure Boot) vs legacy BIOS/MBR |
+| `boot_03_grub.sh` | GRUB config basics |
+| `boot_04_initramfs.sh` | initramfs, `lsinitrd`/`dracut` basics |
+| `boot_05_kernel_params.sh` | `/proc/cmdline`, kernel boot parameters |
+| `boot_06_init_systems.sh` | advanced: sysvinit vs OpenRC vs systemd as PID 1 |
 
