@@ -1,19 +1,18 @@
 # Progressive apk (Alpine Package Keeper) Lessons
 
-A step-by-step series learning Alpine's `apk` package manager from basics
-through advanced usage. Each step is a standalone `apk_NN_topic.sh` — a
-full copy of the previous step plus one new concept.
+Alpine's `apk` package manager, from basics through advanced usage, in
+one file: `apk.sh`, sectioned with `----- N. topic -----` markers.
 
-Steps:
+Sections:
 
-| File | Topic |
+| # | Topic |
 |---|---|
-| `apk_01_install_remove.sh` | `apk add`, `apk del`, `apk upgrade` |
-| `apk_02_search_info.sh` | `apk search`, `apk info` |
-| `apk_03_repositories.sh` | `apk update`, `/etc/apk/repositories`, edge/testing |
-| `apk_04_virtual_packages.sh` | `apk add --virtual` for disposable build deps |
-| `apk_05_cache.sh` | local package cache, `--no-cache`, offline installs |
-| `apk_06_fix_verify.sh` | `apk fix`, `apk verify`, package integrity |
-| `apk_07_world_pinning.sh` | `/etc/apk/world`, pinning versions |
-| `apk_08_build_local.sh` | advanced: building/installing a local package with `abuild` |
-| `apk_09_custom_repo.sh` | advanced: hosting/using a custom apk repository |
+| 1 | `apk add`, `apk del`, `apk upgrade` |
+| 2 | `apk search`, `apk info` |
+| 3 | `apk update`, `/etc/apk/repositories`, edge/testing |
+| 4 | `apk add --virtual` for disposable build deps |
+| 5 | local package cache, `--no-cache`, offline installs |
+| 6 | `apk fix`, `apk verify`, package integrity |
+| 7 | `/etc/apk/world`, pinning versions |
+| 8 | advanced: building/installing a local package with `abuild` |
+| 9 | advanced: hosting/using a custom apk repository |
