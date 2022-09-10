@@ -1,14 +1,14 @@
 # Progressive BusyBox Lessons
 
-A step-by-step series learning BusyBox — the single multi-call binary
-that provides most of Alpine's core userland instead of GNU coreutils.
-Each step is a standalone `busybox_NN_topic.sh`.
+BusyBox — the single multi-call binary that provides most of Alpine's
+core userland instead of GNU coreutils — in one file: `busybox.sh`,
+sectioned with `----- N. topic -----` markers.
 
-Steps:
+Sections:
 
-| File | Topic |
+| # | Topic |
 |---|---|
-| `busybox_01_overview.sh` | what BusyBox is, `busybox --list` |
-| `busybox_02_multicall_symlinks.sh` | the symlink-based multi-call mechanism |
-| `busybox_03_vs_gnu_coreutils.sh` | missing flags / behavior differences vs GNU coreutils |
-| `busybox_04_ash_quirks.sh` | advanced: `ash` shell scripting quirks vs `bash` |
+| 1 | what BusyBox is, `busybox --list` |
+| 2 | the symlink-based multi-call mechanism |
+| 3 | missing flags / behavior differences vs GNU coreutils |
+| 4 | advanced: `ash` shell scripting quirks vs `bash` |
