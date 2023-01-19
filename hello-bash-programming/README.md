@@ -1,23 +1,21 @@
 # Progressive Bash Programming Lessons
 
 A step-by-step series learning bash as a programming language, from basic
-scripting up through advanced usage. Each step is a standalone
-`bash_NN_topic.sh`.
+scripting up through advanced usage. Each step is a standalone file.
 
 Steps:
 
-| File | Topic |
+| Step | Topic |
 |---|---|
-| `bash_01_variables_io.sh` | variables, `read`, basic I/O |
-| `bash_02_conditionals.sh` | `if`/`[[ ]]`, exit codes |
-| `bash_03_loops.sh` | `for`, `while`, `until` |
-| `bash_04_functions.sh` | functions, arguments, return values |
-| `bash_05_arrays.sh` | indexed and associative arrays |
-| `bash_06_string_manipulation.sh` | parameter expansion, substrings, `[[ =~ ]]` |
-| `bash_07_arithmetic.sh` | `(( ))`, `$(( ))`, integer math |
-| `bash_08_getopts.sh` | parsing flags with `getopts` |
-| `bash_09_traps_signals.sh` | `trap`, cleanup on exit/signal |
-| `bash_10_heredocs.sh` | here-docs and here-strings |
-| `bash_11_process_substitution.sh` | `<(...)`, `>(...)` |
-| `bash_12_advanced_debugging.sh` | advanced: `set -x`/`set -e`/`set -u`, shellcheck |
-
+| 01 | variables, `read`, basic I/O |
+| 02 | `if`/`[[ ]]`, exit codes |
+| 03 | `for`, `while`, `until` |
+| 04 | functions, arguments, return values |
+| 05 | indexed and associative arrays |
+| 06 | parameter expansion, substrings, `[[ =~ ]]` |
+| 07 | `(( ))`, `$(( ))`, integer math |
+| 08 | parsing flags with `getopts` |
+| 09 | `trap`, cleanup on exit/signal |
+| 10 | here-docs and here-strings |
+| 11 | `<(...)`, `>(...)` |
+| 12 | advanced: `set -x`/`set -e`/`set -u`, shellcheck |
