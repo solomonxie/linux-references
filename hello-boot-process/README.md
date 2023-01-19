@@ -1,17 +1,16 @@
 # Progressive Boot Process Lessons
 
 A step-by-step series learning the Linux boot process — BIOS/UEFI, GRUB,
-initramfs, and init — a useful contrast to `hello-openrc`-style init-system
-folders. Each step is a standalone `boot_NN_topic.sh`.
+initramfs, and init — a useful contrast to the OpenRC/systemd folders.
+Each step is a standalone file.
 
 Steps:
 
-| File | Topic |
+| Step | Topic |
 |---|---|
-| `boot_01_overview.sh` | BIOS/UEFI → bootloader → kernel → init, the full chain |
-| `boot_02_uefi_bios.sh` | UEFI (ESP, `efibootmgr`, Secure Boot) vs legacy BIOS/MBR |
-| `boot_03_grub.sh` | GRUB config basics |
-| `boot_04_initramfs.sh` | initramfs, `lsinitrd`/`dracut` basics |
-| `boot_05_kernel_params.sh` | `/proc/cmdline`, kernel boot parameters |
-| `boot_06_init_systems.sh` | advanced: sysvinit vs OpenRC vs systemd as PID 1 |
-
+| 01 | BIOS/UEFI → bootloader → kernel → init, the full chain |
+| 02 | UEFI (ESP, `efibootmgr`, Secure Boot) vs legacy BIOS/MBR |
+| 03 | GRUB config basics |
+| 04 | initramfs, `lsinitrd`/`dracut` basics |
+| 05 | `/proc/cmdline`, kernel boot parameters |
+| 06 | advanced: sysvinit vs OpenRC vs systemd as PID 1 |

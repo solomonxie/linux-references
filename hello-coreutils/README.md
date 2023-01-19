@@ -1,23 +1,22 @@
 # Hello Coreutils
 
-One shell file per common Linux CLI tool, each meant to collect that
-tool's most common real-world usages as runnable example commands.
+One shell script per common Linux CLI tool, each collecting that tool's
+most common real-world usages as runnable example commands.
 
-| File | Tool |
+| Tool | What it covers |
 |---|---|
-| `awk.sh` | text processing / field extraction |
-| `sed.sh` | stream editing |
-| `grep.sh` | pattern search |
-| `find.sh` | file search |
-| `xargs.sh` | building/running commands from stdin |
-| `tar.sh` | archiving |
-| `rsync.sh` | file sync |
-| `lsof.sh` | list open files |
-| `nc.sh` | netcat |
-| `ss.sh` | socket statistics |
-| `tcpdump.sh` | packet capture |
-| `df.sh` | disk free space |
-| `du.sh` | disk usage per file/dir |
-| `lsblk.sh` | list block devices |
-| `mount.sh` | mount/unmount filesystems |
-
+| awk | text processing / field extraction |
+| sed | stream editing |
+| grep | pattern search |
+| find | file search |
+| xargs | building/running commands from stdin |
+| tar | archiving |
+| rsync | file sync |
+| lsof | list open files |
+| nc | netcat |
+| ss | socket statistics |
+| tcpdump | packet capture |
+| df | disk free space |
+| du | disk usage per file/dir |
+| lsblk | list block devices |
+| mount | mount/unmount filesystems |

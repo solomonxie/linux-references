@@ -2,15 +2,14 @@
 
 A step-by-step series learning disk partitioning — fdisk, parted, and
 LVM — complementing the disk-related scripts in `hello-coreutils/`. Each
-step is a standalone `disk_NN_topic.sh`.
+step is a standalone file.
 
 Steps:
 
-| File | Topic |
+| Step | Topic |
 |---|---|
-| `disk_01_fdisk_basics.sh` | `fdisk`, MBR partitioning |
-| `disk_02_parted_basics.sh` | `parted`, GPT partitioning |
-| `disk_03_mkfs_mount.sh` | formatting a partition and mounting it |
-| `disk_04_lvm_pv_vg_lv.sh` | physical/volume/logical volumes |
-| `disk_05_resize_advanced.sh` | advanced: growing/shrinking an LVM volume and its filesystem online |
-
+| 01 | `fdisk`, MBR partitioning |
+| 02 | `parted`, GPT partitioning |
+| 03 | formatting a partition and mounting it |
+| 04 | physical/volume/logical volumes |
+| 05 | advanced: growing/shrinking an LVM volume and its filesystem online |
