@@ -3,7 +3,7 @@
 # What this step adds: advanced — systemd vs OpenRC concept mapping.
 # Step 7: systemd vs OpenRC
 
-# Step 7: rough command equivalents (see alpine/openrc/openrc_05_vs_systemd.sh
+# Step 7: rough command equivalents (see alpine/hello-openrc.sh section 5
 # for the mirror image of this table)
 #   rc-service foo start     <->  systemctl start foo
 #   rc-update add foo default <-> systemctl enable foo
