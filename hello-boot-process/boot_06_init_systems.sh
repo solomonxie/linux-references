@@ -12,7 +12,7 @@ ps -p 1 -o pid,comm
 # state, then supervise services), different designs:
 #   sysvinit  — sequential /etc/init.d scripts run by rc, oldest model
 #   OpenRC    — dependency-aware script runner over the same kind of
-#               /etc/init.d scripts (see alpine/openrc/)
+#               /etc/init.d scripts (see alpine/hello-openrc.sh)
 #   systemd   — a single long-running daemon, unit files instead of
 #               scripts, native cgroup-per-service tracking (see hello-systemd/)
 

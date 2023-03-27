@@ -1,8 +1,8 @@
 # Progressive systemd Lessons
 
 A step-by-step series learning systemd — the init system most non-Alpine
-distros use, and the natural counterpart to `alpine/openrc/`. Each step
-is a standalone file.
+distros use, and the natural counterpart to `alpine/hello-openrc.sh`.
+Each step is a standalone file.
 
 Steps:
 
