@@ -3,8 +3,6 @@
 # What this step adds: persisting and sharing data with volumes and bind mounts.
 # Step 4: volumes and bind mounts
 
-docker build -t docker_demo:latest /tmp 2>/dev/null
-
 # Step 4: named volume — managed by docker, survives container removal
 docker volume create demo_vol
 docker run --rm -v demo_vol:/data alpine sh -c 'echo hello > /data/f.txt'

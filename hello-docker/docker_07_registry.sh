@@ -3,6 +3,7 @@
 # What this step adds: tagging and pushing/pulling images to/from a registry.
 # Step 7: registries
 
+docker build -f Dockerfile.02-basics -t docker_demo:latest .   # from step 2
 docker images | head -3
 
 # Step 7: tag names encode the registry, repo, and version
