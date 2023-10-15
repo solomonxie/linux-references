@@ -1,0 +1,37 @@
+# Step 7: compose volumes & networks — persistent data and network isolation
+# declared the same way `docker volume`/`docker network` would do by hand
+# (see steps 4-5), but scoped to this app automatically.
+# Commands:
+#   docker compose -f docker_07_compose_volumes_networks.yaml up -d
+#   docker compose -f docker_07_compose_volumes_networks.yaml down -v
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: demo
+    volumes:
+      - db_data:/var/lib/postgresql/data   # named volume — survives `down` (without -v)
+    networks:
+      - backend                             # only reachable from the backend network
+
+  api:
+    image: alpine
+    command: sh -c "while true; do echo api alive; sleep 5; done"
+    networks:
+      - backend
+      - frontend                            # api bridges both networks; db only sees backend
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    networks:
+      - frontend                             # web can't reach db directly — no shared network
+
+volumes:
+  db_data:                                   # declared once, referenced by name above
+
+networks:
+  frontend:
+  backend:

@@ -1,0 +1,39 @@
+# Step 9: advanced compose — healthchecks, dependency ordering on health,
+# profiles (opt-in service groups), and scaling.
+# Commands:
+#   docker compose -f docker_09_compose_advanced.yaml up -d          # only "web" (default profile)
+#   docker compose -f docker_09_compose_advanced.yaml --profile debug up -d   # + debug tools
+#   docker compose -f docker_09_compose_advanced.yaml up -d --scale web=3
+#
+# Also worth knowing (no dedicated demo file — same mechanism as steps
+# 6-8, just an additional file docker auto-merges on top):
+#   a compose.override.yaml next to a compose.yaml is merged in
+#   automatically by plain `docker compose up`, letting local/dev-only
+#   tweaks (extra ports, bind mounts) live outside the main file.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: demo
+    # Step 9: compose waits for this to report healthy before starting
+    # anything that `depends_on: condition: service_healthy` points at it
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  web:
+    image: nginx:alpine
+    depends_on:
+      db:
+        condition: service_healthy   # not just "started" — actually healthy
+    deploy:
+      restart_policy:
+        condition: on-failure         # restart on crash, not on a clean exit
+
+  debug-tools:
+    image: alpine
+    command: sleep infinity
+    profiles: ["debug"]               # only started when --profile debug is passed
