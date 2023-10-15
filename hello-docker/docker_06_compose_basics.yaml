@@ -1,0 +1,20 @@
+# Step 6: docker compose — declaring a multi-container app in one file
+# (normally this file would just be named compose.yaml so `docker compose`
+# picks it up with no flag; it's suffixed here to keep this series' steps
+# distinct in one folder, so -f is needed)
+# Commands:
+#   docker compose -f docker_06_compose_basics.yaml up -d
+#   docker compose -f docker_06_compose_basics.yaml ps
+#   docker compose -f docker_06_compose_basics.yaml logs api --tail 3
+#   docker compose -f docker_06_compose_basics.yaml down   # add -v to also remove volumes
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+  api:
+    image: alpine
+    command: sh -c "while true; do echo api alive; sleep 5; done"

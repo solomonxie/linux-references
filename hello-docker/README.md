@@ -1,21 +1,25 @@
 # Progressive Docker Lessons
 
-A step-by-step series learning Docker — the CLI, Dockerfiles, compose,
-registries — through to Podman and the rest of the container tooling
-landscape. Steps that are just CLI usage are shell scripts; steps about a
-config format (a Dockerfile, a compose file) are that real format, with
-the explanation as comments inside it — not a shell script generating one.
+A step-by-step series learning Docker — the CLI, Dockerfiles, and compose
+in depth — through to Podman and the rest of the container tooling
+landscape. Every file is named `docker_NN_topic`, with the extension
+matching what it actually is: `.sh` for CLI-only steps, `.dockerfile` for
+a real Dockerfile, `.yaml` for a real compose file — the explanation
+lives as comments inside that real file, not in a wrapping shell script.
 
 Steps:
 
 | Step | Topic |
 |---|---|
 | 01. cli basics | `docker run/ps/images/logs/exec` |
-| 02. dockerfile basics | a real `Dockerfile`, commented instruction by instruction |
-| 03. multistage builds | a real multi-stage `Dockerfile`, `.dockerignore` |
+| 02. dockerfile | a real Dockerfile, commented instruction by instruction |
+| 03. dockerfile multistage | a real multi-stage Dockerfile, `.dockerignore` |
 | 04. volumes | named volumes and bind mounts |
 | 05. networking | user-defined networks, publishing ports |
-| 06. compose | a real `compose.yaml`, multi-container apps |
-| 07. registry | tagging, `push`/`pull`, a local registry |
-| 08. podman | podman as a daemonless, rootless docker alternative |
-| 09. other alternatives | advanced: buildah, nerdctl/containerd, colima/lima, Rancher Desktop |
+| 06. compose basics | a real compose file, multi-container apps |
+| 07. compose volumes networks | named volumes and custom networks in compose |
+| 08. compose env | `environment:`, `env_file:`, `${VAR}` substitution |
+| 09. compose advanced | healthchecks, profiles, scaling, override files |
+| 10. registry | tagging, `push`/`pull`, a local registry |
+| 11. podman | podman as a daemonless, rootless docker alternative |
+| 12. other alternatives | advanced: buildah, nerdctl/containerd, colima/lima, Rancher Desktop |
