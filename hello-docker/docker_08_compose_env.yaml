@@ -1,0 +1,27 @@
+# Step 8: compose environment variables — passing config into containers,
+# and into the compose file itself, without hardcoding it.
+# Commands:
+#   docker compose -f docker_08_compose_env.yaml --env-file docker_08.env up -d
+#   docker compose -f docker_08_compose_env.yaml --env-file docker_08.env down
+# (a file literally named .env next to this one would be picked up
+# automatically, no --env-file needed; it's named docker_08.env here to
+# keep this series' steps distinct in one folder)
+
+services:
+  api:
+    image: alpine
+    # Step 8: inline environment values, visible inside the container
+    environment:
+      GREETING: "hello from compose"
+      RETRIES: "3"
+    # Step 8: load a whole file of KEY=VALUE pairs into the container's env
+    env_file:
+      - docker_08.env
+    # Step 8: ${VAR} here is substituted from the host/--env-file *before*
+    # the container ever starts — a build-time value, not a runtime one
+    command: sh -c "echo $$GREETING; echo host-provided port is ${WEB_PORT}; sleep 5"
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "${WEB_PORT}:80"   # ${WEB_PORT} substituted from docker_08.env at compose-parse time
