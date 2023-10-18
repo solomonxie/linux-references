@@ -1,0 +1,20 @@
+# Step 4: same unit as step 3, plus dependency/ordering declarations.
+# Wants = soft dependency, Requires = hard dependency, After/Before =
+# ordering only (independent of Wants/Requires).
+# Install: sudo cp systemd_04_dependencies.service /etc/systemd/system/myecho.service
+#          sudo systemctl daemon-reload
+# Run:     sudo systemctl start myecho
+# Stop:    sudo systemctl stop myecho
+
+[Unit]
+Description=My echo listener
+Wants=network-online.target
+After=network-online.target
+Requires=myecho.socket
+
+[Service]
+ExecStart=/usr/bin/nc -l -p 9000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

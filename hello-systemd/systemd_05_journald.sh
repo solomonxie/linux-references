@@ -3,6 +3,8 @@
 # What this step adds: reading service logs via journald.
 # Step 5: journalctl
 
+sudo cp systemd_04_dependencies.service /etc/systemd/system/myecho.service   # from step 4
+sudo systemctl daemon-reload
 sudo systemctl start myecho
 
 # Step 5: logs for a specific unit
