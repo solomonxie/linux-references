@@ -19,6 +19,7 @@ Steps:
 | 07. namespaces resources | namespace isolation, ResourceQuota |
 | 08. ingress | HTTP(S) routing into the cluster by host/path |
 | 09. helm basics | installing/upgrading charts, scaffolding your own |
-| 10. kustomize | patching manifests per environment without templating |
-| 11. local clusters | advanced: kind vs minikube vs k3s/k3d vs Docker/Rancher Desktop |
-| 12. troubleshooting | advanced: `describe`/`logs`/`exec`/`port-forward`, a debug pod |
+| 10. helm chart templates | Chart.yaml/values.yaml/templates — Go-templating steps 2-4 |
+| 11. kustomize | patching manifests per environment without templating |
+| 12. local clusters | advanced: kind vs minikube vs k3s/k3d vs Docker/Rancher Desktop |
+| 13. troubleshooting | advanced: `describe`/`logs`/`exec`/`port-forward`, a debug pod |
