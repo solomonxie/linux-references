@@ -1,10 +1,11 @@
 # Progressive Kubernetes Lessons
 
 A step-by-step series learning Kubernetes — kubectl, the core object
-manifests, Helm, and Kustomize — through to local cluster tooling and
-troubleshooting. Every file is named `k8s_NN_topic`, with the extension
-matching what it actually is: `.sh` for CLI-only steps, `.yaml` for a
-real manifest — the explanation lives as comments inside that real file.
+manifests, Helm, and Kustomize — through to local cluster tooling,
+troubleshooting, and sidecar containers. Every file is named
+`k8s_NN_topic`, with the extension matching what it actually is: `.sh`
+for CLI-only steps, `.yaml` for a real manifest — the explanation lives
+as comments inside that real file.
 
 Steps:
 
@@ -23,3 +24,4 @@ Steps:
 | 11. kustomize | patching manifests per environment without templating |
 | 12. local clusters | advanced: kind vs minikube vs k3s/k3d vs Docker/Rancher Desktop |
 | 13. troubleshooting | advanced: `describe`/`logs`/`exec`/`port-forward`, a debug pod |
+| 14. sidecar containers | multi-container Pods, and how service mesh sidecar injection extends the pattern |
