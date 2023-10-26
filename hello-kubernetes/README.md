@@ -5,7 +5,8 @@ manifests, Helm, and Kustomize — through to local cluster tooling,
 troubleshooting, and sidecar containers. Every file is named
 `k8s_NN_topic`, with the extension matching what it actually is: `.sh`
 for CLI-only steps, `.yaml` for a real manifest — the explanation lives
-as comments inside that real file.
+as comments inside that real file. Every manifest step from 02 onward
+needs a local cluster reachable via kubectl (see step 01/12).
 
 Steps:
 
