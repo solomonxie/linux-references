@@ -2,6 +2,7 @@
 # manages a ReplicaSet to keep that many running, handling rolling
 # updates/rollbacks. Use this instead of a bare Pod (step 2) for anything
 # long-running.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 # Apply:   kubectl apply -f k8s_03_deployment.yaml
 # Inspect: kubectl get deployments; kubectl get pods -l app=demo; kubectl rollout status deployment/demo
 # Scale:   kubectl scale deployment/demo --replicas=5

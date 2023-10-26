@@ -2,6 +2,7 @@
 # fanning multiple Services out behind one external entrypoint. Needs an
 # Ingress controller installed in the cluster (e.g. ingress-nginx) — this
 # resource alone does nothing without one.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 # Apply:   kubectl apply -f k8s_08_ingress.yaml
 # Inspect: kubectl get ingress demo
 
