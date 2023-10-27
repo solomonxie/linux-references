@@ -1,0 +1,17 @@
+# Step 7: alerting rules -- a PromQL expression that, when true for
+# `for:` duration, fires an alert Prometheus hands to Alertmanager (step 8).
+# Run: mount alongside prometheus.yml and add
+#   rule_files: ["prom_07_alerting_rules.yaml"]
+# Inspect: http://localhost:9090/alerts
+
+groups:
+  - name: demo-app
+    rules:
+      - alert: HighErrorRate
+        expr: rate(app_requests_total{route="/demo"}[5m]) == 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "no traffic on /demo for 2m"
+          description: "app_requests_total hasn't incremented recently"

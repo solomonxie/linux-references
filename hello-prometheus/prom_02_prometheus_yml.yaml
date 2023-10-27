@@ -1,0 +1,13 @@
+# Step 2: a real prometheus.yml -- global scrape defaults plus one job
+# scraping Prometheus's own /metrics endpoint (every Prometheus ships
+# this as a built-in smoke-test target).
+# Run: see prom_03_run_prometheus.sh
+
+global:
+  scrape_interval: 15s      # how often to poll every target below
+  evaluation_interval: 15s  # how often alerting/recording rules run
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]

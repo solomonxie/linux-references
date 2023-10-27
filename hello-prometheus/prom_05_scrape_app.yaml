@@ -1,0 +1,15 @@
+# Step 5: extend step 2's prometheus.yml with a second scrape target --
+# step 4's app running on :8000.
+# Run: same as prom_03_run_prometheus.sh, mounting this file instead
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: demo-app                              # step 5: the new target
+    static_configs:
+      - targets: ["host.docker.internal:8000"]      # localhost, from inside the container
