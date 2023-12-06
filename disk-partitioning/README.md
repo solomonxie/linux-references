@@ -1,7 +1,7 @@
 # Progressive Disk Partitioning Lessons
 
 A step-by-step series learning disk partitioning — fdisk, parted, and
-LVM — complementing the disk-related scripts in `hello-coreutils/`. Each
+LVM — complementing the disk-related scripts in `coreutils/`. Each
 step is a standalone file.
 
 Steps:
