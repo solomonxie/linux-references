@@ -22,7 +22,7 @@ resize2fs /dev/disk_demo_vg/disk_demo_lv
 
 df -h /mnt/disk_demo
 
-# Step 5: xfs uses xfs_growfs instead of resize2fs (see hello-filesystems/fs_03_xfs_basics.sh);
+# Step 5: xfs uses xfs_growfs instead of resize2fs (see filesystems/fs_03_xfs_basics.sh);
 # shrinking is far riskier and ext4-only — always back up first, xfs can't shrink at all
 
 umount /mnt/disk_demo
