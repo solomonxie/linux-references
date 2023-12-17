@@ -17,8 +17,8 @@
 # rust-vmm crates), aimed at a broader device model (e.g. vfio passthrough)
 # for cases that outgrow Firecracker's intentionally minimal one
 
-# Step 8: kern (see hello-kern) and plain namespaces+cgroups (see
-# hello-namespaces-cgroups) stay in the "shared host kernel" tier --
+# Step 8: kern (see kern) and plain namespaces+cgroups (see
+# namespaces-cgroups) stay in the "shared host kernel" tier --
 # faster to start than any VM-based option, but a kernel 0-day is a
 # cross-tenant escape in a way it structurally can't be with a microVM
 
