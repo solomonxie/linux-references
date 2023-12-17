@@ -5,8 +5,8 @@
 
 # Step 1: the isolation spectrum, roughly cheapest/least-isolated to
 # most-isolated/most-overhead:
-#   process             -- plain subprocess, shares everything (see hello-kern step 1)
-#   namespaces+cgroups   -- `docker run`, `kern box` (see hello-namespaces-cgroups, hello-kern)
+#   process             -- plain subprocess, shares everything (see kern step 1)
+#   namespaces+cgroups   -- `docker run`, `kern box` (see namespaces-cgroups, kern)
 #   microVM              -- Firecracker: a real VM boundary (its own kernel),
 #                           but stripped down to boot in ~125ms with ~5MiB overhead
 #   full VM              -- a whole QEMU/VirtualBox guest, general-purpose device model
