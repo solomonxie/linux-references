@@ -3,7 +3,7 @@
 # What this step adds: Prometheus — a pull-based metrics system: it
 # scrapes a `/metrics` HTTP endpoint your app exposes, rather than your
 # app pushing samples to it (contrast OTel's push-based OTLP, see
-# hello-opentelemetry).
+# opentelemetry).
 # Step 1: concepts
 
 # Four metric types, all exposed as plain text on /metrics:
