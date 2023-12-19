@@ -25,4 +25,4 @@
 
 # rule of thumb: static_configs for a handful of fixed targets (this
 # series), file_sd for anything scripted/templated, kubernetes_sd once
-# you're actually inside a cluster (see hello-kubernetes).
+# you're actually inside a cluster (see kubernetes).
