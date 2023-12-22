@@ -20,3 +20,4 @@ most common real-world usages as runnable example commands.
 | du | disk usage per file/dir |
 | lsblk | list block devices |
 | mount | mount/unmount filesystems |
+| disk-partitioning | fdisk / parted / mkfs / LVM / online resize |
