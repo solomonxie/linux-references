@@ -23,3 +23,15 @@ Steps:
 | 10. registry | tagging, `push`/`pull`, a local registry |
 | 11. podman | podman as a daemonless, rootless docker alternative |
 | 12. other alternatives | advanced: buildah, nerdctl/containerd, colima/lima, Rancher Desktop |
+
+## Reference assets
+
+Real-world files that don't fit the numbered step format:
+
+| File | What it is |
+|---|---|
+| `get-docker.sh` | official `get.docker.com` install script (vendored) |
+| `daemon.json` | `/etc/docker/daemon.json` example — registry mirrors, debug/experimental flags |
+| `multipass.md` | spinning up a disposable Ubuntu VM with Multipass to run Docker in |
+| `services/plex/` | Plex media server compose file |
+| `services/shadowsocks/` | shadowsocks + kcptun + v2ray compose stack |
