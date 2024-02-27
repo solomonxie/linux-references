@@ -8,9 +8,9 @@ Steps:
 
 | Step | Topic |
 |---|---|
-| 01 | BIOS/UEFI → bootloader → kernel → init, the full chain |
-| 02 | UEFI (ESP, `efibootmgr`, Secure Boot) vs legacy BIOS/MBR |
-| 03 | GRUB config basics |
-| 04 | initramfs, `lsinitrd`/`dracut` basics |
-| 05 | `/proc/cmdline`, kernel boot parameters |
-| 06 | advanced: sysvinit vs OpenRC vs systemd as PID 1 |
+| 01. overview | BIOS/UEFI → bootloader → kernel → init, the full chain |
+| 02. uefi bios | UEFI (ESP, `efibootmgr`, Secure Boot) vs legacy BIOS/MBR |
+| 03. grub | GRUB config basics |
+| 04. initramfs | initramfs, `lsinitrd`/`dracut` basics |
+| 05. kernel params | `/proc/cmdline`, kernel boot parameters |
+| 06. init systems | advanced: sysvinit vs OpenRC vs systemd as PID 1 |

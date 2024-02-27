@@ -8,8 +8,8 @@ Steps:
 
 | Step | Topic |
 |---|---|
-| 01 | `fdisk`, MBR partitioning |
-| 02 | `parted`, GPT partitioning |
-| 03 | formatting a partition and mounting it |
-| 04 | physical/volume/logical volumes |
-| 05 | advanced: growing/shrinking an LVM volume and its filesystem online |
+| 01. fdisk basics | `fdisk`, MBR partitioning |
+| 02. parted basics | `parted`, GPT partitioning |
+| 03. mkfs mount | formatting a partition and mounting it |
+| 04. lvm pv vg lv | physical/volume/logical volumes |
+| 05. resize advanced | advanced: growing/shrinking an LVM volume and its filesystem online |
