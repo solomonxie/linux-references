@@ -8,7 +8,7 @@ docker run --rm alpine echo "via docker"
 # Step 8: podman's CLI mirrors docker's closely — most `docker ...`
 # commands from steps 1-7 work verbatim as `podman ...`
 podman run --rm alpine echo "via podman"
-podman build -t docker_demo:latest .   2>/dev/null || true
+podman build -f Dockerfile.02-basics -t docker_demo:latest .   # same Dockerfile as step 2
 podman ps -a
 podman images
 
