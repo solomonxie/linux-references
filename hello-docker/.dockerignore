@@ -1,0 +1,5 @@
+# Step 3: keeps local junk out of every build context in this folder,
+# regardless of which Dockerfile is built with -f
+.git
+*.log
+node_modules
