@@ -1,5 +1,5 @@
 # Step 3: multi-stage builds — keep the shipped image free of build-time tools
-# Build: docker build -f Dockerfile.03-multistage -t docker_multistage:latest .
+# Build: docker build -f docker_03_dockerfile_multistage.dockerfile -t docker_multistage:latest .
 # Run:   docker run --rm docker_multistage:latest
 # (the .dockerignore in this folder applies to this build too — see it for what's excluded)
 

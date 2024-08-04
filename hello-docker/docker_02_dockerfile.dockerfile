@@ -1,5 +1,5 @@
 # Step 2: Dockerfile basics
-# Build: docker build -f Dockerfile.02-basics -t docker_demo:latest .
+# Build: docker build -f docker_02_dockerfile.dockerfile -t docker_demo:latest .
 # Run:   docker run --rm docker_demo:latest
 
 FROM alpine:3.20              # base image — a small Linux userland to build on
