@@ -14,7 +14,7 @@
 # deprecated, migrate off them if you still see either
 
 # vs Prometheus client libraries directly -- Prometheus's own client_python
-# (see hello-prometheus step 04) is simpler for metrics-only services with
+# (see prometheus step 04) is simpler for metrics-only services with
 # no tracing/logs need and no Collector in the path; OTel's Metrics API
 # is the better fit once you also want traces, or want the Collector's
 # pipeline (step 4) processing/routing metrics before they land anywhere
