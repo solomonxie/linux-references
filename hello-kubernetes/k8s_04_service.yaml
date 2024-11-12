@@ -1,0 +1,19 @@
+# Step 4: a Service — a stable virtual IP + DNS name in front of a set of
+# Pods selected by label, so callers don't need to track individual Pod
+# IPs (which change every time a Pod is rescheduled).
+# Apply:   kubectl apply -f k8s_04_service.yaml
+# Inspect: kubectl get svc demo
+# Test:    kubectl run tmp --rm -it --image=alpine --restart=Never -- wget -qO- http://demo
+# Remove:  kubectl delete -f k8s_04_service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo
+spec:
+  selector:
+    app: demo          # matches the Deployment's Pod labels from step 3
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP        # internal-only; NodePort/LoadBalancer expose it externally
