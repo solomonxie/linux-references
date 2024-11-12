@@ -1,0 +1,23 @@
+# Step 8: Ingress — HTTP(S) routing into the cluster by hostname/path,
+# fanning multiple Services out behind one external entrypoint. Needs an
+# Ingress controller installed in the cluster (e.g. ingress-nginx) — this
+# resource alone does nothing without one.
+# Apply:   kubectl apply -f k8s_08_ingress.yaml
+# Inspect: kubectl get ingress demo
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo
+spec:
+  rules:
+    - host: demo.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: demo        # the Service from step 4
+                port:
+                  number: 80
