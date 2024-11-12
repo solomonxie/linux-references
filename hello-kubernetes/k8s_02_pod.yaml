@@ -1,0 +1,27 @@
+# Step 2: a Pod — the smallest deployable unit, one or more containers
+# sharing network/storage. You rarely create bare Pods directly (step 3's
+# Deployment is the normal way) but every higher-level object ultimately
+# creates Pods shaped like this one.
+# Apply:   kubectl apply -f k8s_02_pod.yaml
+# Inspect: kubectl get pod demo-pod; kubectl logs demo-pod
+# Remove:  kubectl delete -f k8s_02_pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  labels:
+    app: demo
+spec:
+  containers:
+    - name: web
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+      resources:
+        requests:
+          cpu: "100m"
+          memory: "64Mi"
+        limits:
+          cpu: "250m"
+          memory: "128Mi"
