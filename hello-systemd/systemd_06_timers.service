@@ -1,0 +1,14 @@
+# Step 6: a oneshot service the matching .timer triggers on a schedule.
+# systemd pairs a .timer with the .service of the same base name unless
+# the timer's Unit= says otherwise — that's why this file and
+# systemd_06_timers.timer share a name.
+# Install: sudo cp systemd_06_timers.service /etc/systemd/system/myecho-log.service
+#          sudo cp systemd_06_timers.timer /etc/systemd/system/myecho-log.timer
+#          sudo systemctl daemon-reload
+
+[Unit]
+Description=Log a heartbeat
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/echo "heartbeat at $(date)"

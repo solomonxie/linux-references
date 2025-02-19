@@ -1,0 +1,15 @@
+# Step 3: a minimal service unit for a background command.
+# Install: sudo cp systemd_03_custom_unit.service /etc/systemd/system/myecho.service
+#          sudo systemctl daemon-reload
+# Run:     sudo systemctl start myecho; sudo systemctl status myecho
+# Stop:    sudo systemctl stop myecho
+
+[Unit]
+Description=My echo listener
+
+[Service]
+ExecStart=/usr/bin/nc -l -p 9000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

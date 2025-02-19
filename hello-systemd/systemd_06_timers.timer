@@ -1,0 +1,15 @@
+# Step 6: systemd's alternative to cron — see systemd_06_timers.service
+# for the unit this triggers, and its own header for install steps.
+# Run:  sudo systemctl enable --now myecho-log.timer
+# Show: systemctl list-timers
+# Stop: sudo systemctl disable --now myecho-log.timer
+
+[Unit]
+Description=Run myecho-log every 5 minutes
+
+[Timer]
+OnCalendar=*:0/5
+Persistent=true
+
+[Install]
+WantedBy=timers.target
