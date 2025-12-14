@@ -1,0 +1,64 @@
+# Step 10: Helm chart templates — the files step 9's `helm create` scaffolds:
+# Chart.yaml (metadata), values.yaml (defaults), templates/*.yaml (Go-
+# templated manifests, same shape as steps 2-4, rendered against those
+# values at install time).
+# Real-world naming note: Helm requires an actual directory containing
+# Chart.yaml, values.yaml, and a templates/ subdirectory — shown here
+# concatenated into one file, one section per real file, to keep this
+# series flat. Split into that layout under e.g. my-chart/ to actually run:
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12), and
+#         helm itself (see step 09).
+# Preview: helm template demo ./my-chart --set replicaCount=5
+# Install: helm install demo ./my-chart
+# Upgrade: helm upgrade demo ./my-chart --set image.tag=1.26
+# Remove:  helm uninstall demo
+
+# ===== Chart.yaml =====
+apiVersion: v2
+name: my-chart
+description: A demo chart templating steps 2-4 (Pod/Deployment/Service)
+version: 0.1.0
+appVersion: "1.0"
+
+# ===== values.yaml =====
+replicaCount: 2
+image:
+  repository: nginx
+  tag: alpine
+service:
+  port: 80
+
+# ===== templates/deployment.yaml =====
+# {{ .Release.Name }} and {{ .Values.* }} are filled in from the values
+# above (or a --set/--values override) when the chart is installed.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: web
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.service.port }}
+
+# ===== templates/service.yaml =====
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  selector:
+    app: {{ .Release.Name }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}

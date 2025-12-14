@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-# Run: sh k8s_11_local_clusters.sh (reference notes, not meant to fully execute)
+# Run: sh k8s_12_local_clusters.sh (reference notes, not meant to fully execute)
 # What this step adds: advanced — local cluster tooling for development.
-# Step 11: local clusters
+# Step 12: local clusters
 
 # kind (Kubernetes IN Docker) — runs cluster nodes as docker containers,
 # fast to spin up/tear down, popular for CI
