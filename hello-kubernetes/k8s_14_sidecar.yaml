@@ -1,0 +1,38 @@
+# Step 14: sidecar containers — a Pod with more than one container sharing
+# network and storage (step 2 said "one or more containers"; here's the
+# usual reason for more than one). A logging sidecar tails the app
+# container's log file over a shared emptyDir volume — the classic sidecar
+# pattern.
+# Service mesh note: Istio/Linkerd automate this same pattern at scale —
+# a mutating webhook auto-injects a proxy sidecar (Envoy, for Istio) into
+# every Pod to transparently intercept traffic for mTLS, retries, and
+# observability. Same mechanism as below (an extra container sharing the
+# Pod's network namespace), just injected for you instead of hand-written.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
+# Apply:   kubectl apply -f k8s_14_sidecar.yaml
+# Inspect: kubectl logs demo-sidecar -c sidecar
+# Remove:  kubectl delete -f k8s_14_sidecar.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-sidecar
+  labels:
+    app: demo-sidecar
+spec:
+  containers:
+    - name: app
+      image: alpine
+      command: ["sh", "-c", "while true; do echo $(date) hello >> /var/log/app.log; sleep 2; done"]
+      volumeMounts:
+        - name: logs
+          mountPath: /var/log
+    - name: sidecar
+      image: alpine
+      command: ["sh", "-c", "tail -f /var/log/app.log"]
+      volumeMounts:
+        - name: logs
+          mountPath: /var/log
+  volumes:
+    - name: logs
+      emptyDir: {}
