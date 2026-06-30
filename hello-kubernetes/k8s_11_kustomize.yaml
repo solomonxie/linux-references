@@ -6,6 +6,7 @@
 # k8s_11_kustomize.yaml here only to keep this series' steps distinct in
 # one folder; rename it to kustomization.yaml in its own directory to
 # actually run `kubectl apply -k .` against it.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 
 resources:
   - k8s_03_deployment.yaml

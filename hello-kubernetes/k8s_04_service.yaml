@@ -1,6 +1,7 @@
 # Step 4: a Service — a stable virtual IP + DNS name in front of a set of
 # Pods selected by label, so callers don't need to track individual Pod
 # IPs (which change every time a Pod is rescheduled).
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 # Apply:   kubectl apply -f k8s_04_service.yaml
 # Inspect: kubectl get svc demo
 # Test:    kubectl run tmp --rm -it --image=alpine --restart=Never -- wget -qO- http://demo

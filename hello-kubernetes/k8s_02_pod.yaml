@@ -2,6 +2,7 @@
 # sharing network/storage. You rarely create bare Pods directly (step 3's
 # Deployment is the normal way) but every higher-level object ultimately
 # creates Pods shaped like this one.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 # Apply:   kubectl apply -f k8s_02_pod.yaml
 # Inspect: kubectl get pod demo-pod; kubectl logs demo-pod
 # Remove:  kubectl delete -f k8s_02_pod.yaml
