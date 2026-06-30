@@ -2,6 +2,7 @@
 # from whatever StorageClass the cluster provides (a cloud disk, NFS,
 # local-path...); a Pod mounts the claim without knowing the backing
 # details.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 # Apply:   kubectl apply -f k8s_06_volumes_pvc.yaml
 # Inspect: kubectl get pvc demo-pvc; kubectl get pv
 # Remove:  kubectl delete -f k8s_06_volumes_pvc.yaml

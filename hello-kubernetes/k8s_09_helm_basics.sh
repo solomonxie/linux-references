@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run: sh k8s_09_helm_basics.sh
+# Run: sh k8s_09_helm_basics.sh (needs a cluster with kubectl pointed at it — see step 01/12)
 # What this step adds: Helm — a package manager for Kubernetes manifests
 # (a "chart" bundles templated YAML + default values, roughly steps 2-8
 # combined and parameterized).

@@ -1,6 +1,7 @@
 # Step 7: namespaces isolate a cluster into virtual sub-clusters (naming,
 # RBAC, quotas), and a ResourceQuota caps what a namespace can consume in
 # total — complementing the per-container requests/limits from step 2.
+# Prereq: a local cluster with kubectl pointed at it (see step 01/12).
 # Apply:   kubectl apply -f k8s_07_namespaces_resources.yaml
 # Inspect: kubectl get resourcequota -n demo-ns
 # Remove:  kubectl delete -f k8s_07_namespaces_resources.yaml
