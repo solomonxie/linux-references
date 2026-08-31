@@ -5,7 +5,7 @@
 
 # Step 4: Firecracker doesn't create network devices itself -- you create a
 # host-side TAP device first, the same primitive veth pairs/bridges use
-# (see hello-networking's bridges+veth step), then hand it to the microVM
+# (see networking's bridges+veth step), then hand it to the microVM
 sudo ip tuntap add tap0 mode tap
 sudo ip addr add 172.16.0.1/24 dev tap0
 sudo ip link set tap0 up
