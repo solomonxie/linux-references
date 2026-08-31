@@ -10,7 +10,7 @@ cd ~/fc_demo
 # Step 5: jailer wraps the firecracker binary, then chroots it, applies a
 # seccomp filter, and moves it into cgroups -- so even a Firecracker VMM
 # process compromised via a guest-escape bug has almost nothing to work
-# with on the host (see hello-namespaces-cgroups, hello-kern for the same
+# with on the host (see namespaces-cgroups, kern for the same
 # primitives used elsewhere)
 sudo jailer --id demo-vm --exec-file /usr/local/bin/firecracker \
   --uid 123 --gid 100 \
