@@ -1,0 +1,12 @@
+# Step 9: recording rules -- precompute an expensive/frequent PromQL
+# expression into a new time series on a schedule, instead of
+# recalculating it on every dashboard load or alert evaluation.
+# Run: same rule_files: mechanism as step 7, alongside prometheus.yml
+
+groups:
+  - name: demo-app-aggregations
+    rules:
+      - record: route:app_requests:rate5m         # convention: level:metric:operation
+        expr: sum by (route) (rate(app_requests_total[5m]))
+      - record: route:app_request_duration:p99_5m
+        expr: histogram_quantile(0.99, sum by (route, le) (rate(app_request_duration_seconds_bucket[5m])))
