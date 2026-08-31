@@ -15,7 +15,7 @@ podman images
 # Step 11: key differences from docker
 # - no background daemon: podman talks to the kernel directly per-command
 # - rootless by default: containers run as your user, not a root daemon,
-#   using user namespaces (see hello-namespaces-cgroups)
+#   using user namespaces (see namespaces-cgroups)
 # - `podman-compose` (or podman's native `podman compose`) reads the same
 #   compose files from steps 6-9
 # - `alias docker=podman` is a common drop-in for scripts that assume docker
