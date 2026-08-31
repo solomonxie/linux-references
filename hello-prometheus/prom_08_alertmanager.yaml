@@ -1,0 +1,21 @@
+# Step 8: Alertmanager -- the separate process Prometheus forwards firing
+# alerts to; it dedupes, groups, and routes them to a real notification
+# channel instead of Prometheus emailing/paging directly.
+# Run: docker run --rm -p 9093:9093 \
+#        -v "$(pwd)/prom_08_alertmanager.yaml:/etc/alertmanager/alertmanager.yml" \
+#        prom/alertmanager:latest
+# Wire Prometheus to it by adding to prometheus.yml:
+#   alerting:
+#     alertmanagers:
+#       - static_configs: [{targets: ["localhost:9093"]}]
+
+route:
+  receiver: default
+  group_by: [alertname]
+  group_wait: 30s
+  repeat_interval: 4h
+
+receivers:
+  - name: default
+    webhook_configs:
+      - url: http://localhost:5001/alerts    # swap for Slack/PagerDuty/etc in real use
