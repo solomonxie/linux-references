@@ -14,7 +14,7 @@ ps -p 1 -o pid,comm
 #   OpenRC    — dependency-aware script runner over the same kind of
 #               /etc/init.d scripts (see alpine/hello-openrc.sh)
 #   systemd   — a single long-running daemon, unit files instead of
-#               scripts, native cgroup-per-service tracking (see hello-systemd/)
+#               scripts, native cgroup-per-service tracking (see systemd/)
 
 # Step 6: you can point the kernel at a different init for rescue purposes
 # by appending init=/bin/sh to the kernel command line (see step 5) — this
