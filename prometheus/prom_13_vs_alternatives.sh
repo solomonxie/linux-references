@@ -4,7 +4,7 @@
 # landscape.
 # Step 13: vs alternatives
 
-# vs OpenTelemetry metrics (see hello-opentelemetry) -- OTel's Metrics API
+# vs OpenTelemetry metrics (see opentelemetry) -- OTel's Metrics API
 # is push-based over OTLP and vendor-neutral at the instrumentation layer;
 # Prometheus is a specific pull-based backend + query language + storage.
 # They compose: the OTel Collector's `prometheus` exporter (that series'
@@ -16,7 +16,7 @@
 
 # vs Thanos / Mimir / Cortex -- these don't replace Prometheus, they sit
 # behind many Prometheus instances for long-term/multi-cluster storage
-# and a single global query view (see hello-kubernetes: one Prometheus
+# and a single global query view (see kubernetes: one Prometheus
 # per cluster, Thanos/Mimir aggregating across clusters).
 
 # vs InfluxDB -- push-based (like OTel), its own query language (Flux/
