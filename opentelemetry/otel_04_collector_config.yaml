@@ -21,7 +21,7 @@ exporters:
   debug:
     verbosity: detailed
   prometheus:                 # Collector re-exposes metrics for scraping --
-    endpoint: 0.0.0.0:8889     # see hello-prometheus for the scraping side
+    endpoint: 0.0.0.0:8889     # see prometheus for the scraping side
 
 service:
   pipelines:
