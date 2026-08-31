@@ -3,7 +3,7 @@
 Sandboxing agent-generated code with [kern](https://github.com/getkern/kern) (getkern.dev),
 a real rootless container runtime purpose-built for this ("a real, kernel-enforced container
 in ~3.5 ms from an OCI image, no daemon, one static binary") — instead of hand-rolling the
-rlimits/namespaces/seccomp it's built on (see `hello-namespaces-cgroups` for those raw
+rlimits/namespaces/seccomp it's built on (see `namespaces-cgroups` for those raw
 primitives). Each file is a complete, standalone, runnable script.
 
 ## Setup
